@@ -36,19 +36,7 @@
   }
 
 
-  .social-sidebar {
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.social-hide {
-  transform: translateX(-80px); /* move left */
-  opacity: 0;
-}
-
-.social-show {
-  transform: translateX(0);
-  opacity: 1;
-}
+  
 
   /* ── CUSTOM CURSOR ── */
   #cursor {
@@ -1067,27 +1055,6 @@
 </head>
 <body>
 
-  <script>
-
-    let lastScrollTop = 0;
-const socialBar = document.querySelector('.social-sidebar');
-
-window.addEventListener('scroll', function () {
-  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (currentScroll > lastScrollTop) {
-    // 🔽 Scrolling DOWN → hide
-    socialBar.classList.add('social-hide');
-    socialBar.classList.remove('social-show');
-  } else {
-    // 🔼 Scrolling UP → show
-    socialBar.classList.add('social-show');
-    socialBar.classList.remove('social-hide');
-  }
-
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
-  </script>
   
 <!-- SIDE SOCIAL BAR -->
 <div class="social-sidebar">
